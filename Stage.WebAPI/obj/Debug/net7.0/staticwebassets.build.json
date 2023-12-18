@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "0LZfiovcyldGThGBizExJ8wCcCRDLTEMrNu86pSPtEA=",
+  "Source": "Stage.WebAPI",
+  "BasePath": "_content/Stage.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

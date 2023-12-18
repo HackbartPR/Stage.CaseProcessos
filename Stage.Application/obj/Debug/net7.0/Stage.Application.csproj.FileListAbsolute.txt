@@ -1,0 +1,17 @@
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\bin\Debug\net7.0\Stage.Application.deps.json
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\bin\Debug\net7.0\Stage.Application.dll
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\bin\Debug\net7.0\Stage.Application.pdb
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\bin\Debug\net7.0\Stage.Domain.dll
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\bin\Debug\net7.0\Stage.Infrastructure.dll
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\bin\Debug\net7.0\Stage.Infrastructure.pdb
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\bin\Debug\net7.0\Stage.Domain.pdb
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\obj\Debug\net7.0\Stage.Application.csproj.AssemblyReference.cache
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\obj\Debug\net7.0\Stage.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\obj\Debug\net7.0\Stage.Application.AssemblyInfoInputs.cache
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\obj\Debug\net7.0\Stage.Application.AssemblyInfo.cs
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\obj\Debug\net7.0\Stage.Application.csproj.CoreCompileInputs.cache
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\obj\Debug\net7.0\Stage.Application.csproj.CopyComplete
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\obj\Debug\net7.0\Stage.Application.dll
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\obj\Debug\net7.0\refint\Stage.Application.dll
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\obj\Debug\net7.0\Stage.Application.pdb
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Application\obj\Debug\net7.0\ref\Stage.Application.dll

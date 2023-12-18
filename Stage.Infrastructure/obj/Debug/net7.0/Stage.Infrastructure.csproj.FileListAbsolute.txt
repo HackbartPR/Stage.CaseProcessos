@@ -1,0 +1,17 @@
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\bin\Debug\net7.0\Stage.Infrastructure.deps.json
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\bin\Debug\net7.0\Stage.Infrastructure.dll
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\bin\Debug\net7.0\Stage.Infrastructure.pdb
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\bin\Debug\net7.0\Stage.Domain.dll
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\bin\Debug\net7.0\Stage.Domain.pdb
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\obj\Debug\net7.0\Stage.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\obj\Debug\net7.0\Stage.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\obj\Debug\net7.0\Stage.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\obj\Debug\net7.0\Stage.Infrastructure.AssemblyInfo.cs
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\obj\Debug\net7.0\Stage.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\obj\Debug\net7.0\Stage.Infrastructure.csproj.CopyComplete
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\obj\Debug\net7.0\Stage.Infrastructure.dll
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\obj\Debug\net7.0\refint\Stage.Infrastructure.dll
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\obj\Debug\net7.0\Stage.Infrastructure.pdb
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\obj\Debug\net7.0\ref\Stage.Infrastructure.dll
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\bin\Debug\net7.0\Stage.Infrastructure.runtimeconfig.json
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Infrastructure\obj\Debug\net7.0\Stage.Infrastructure.genruntimeconfig.cache

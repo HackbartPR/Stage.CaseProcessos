@@ -1,0 +1,12 @@
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Domain\bin\Debug\net7.0\Stage.Domain.deps.json
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Domain\bin\Debug\net7.0\Stage.Domain.dll
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Domain\bin\Debug\net7.0\Stage.Domain.pdb
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Domain\obj\Debug\net7.0\Stage.Domain.csproj.AssemblyReference.cache
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Domain\obj\Debug\net7.0\Stage.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Domain\obj\Debug\net7.0\Stage.Domain.AssemblyInfoInputs.cache
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Domain\obj\Debug\net7.0\Stage.Domain.AssemblyInfo.cs
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Domain\obj\Debug\net7.0\Stage.Domain.csproj.CoreCompileInputs.cache
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Domain\obj\Debug\net7.0\Stage.Domain.dll
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Domain\obj\Debug\net7.0\refint\Stage.Domain.dll
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Domain\obj\Debug\net7.0\Stage.Domain.pdb
+C:\Users\guil_\OneDrive\Documentos\Estudos\Stage.CaseProcessos\Stage.Domain\obj\Debug\net7.0\ref\Stage.Domain.dll
