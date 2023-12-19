@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Stage.Domain.Config;
 using Stage.Domain.Repositories;
 using static Stage.Domain.Config.Constants;
 
@@ -43,6 +44,14 @@ namespace Stage.Application.Repositories
             return _context.Set<Entity>().AsQueryable();
         }
 
+        public async Task<ICollection<Entity>> ToPagedListAsync(IQueryable<Entity> query, PagedBaseRequest request, CancellationToken cancellationToken = default)
+        {
+            return await query
+                .Skip((request.Page - 1) * request.PageSize)
+                .Take(request.PageSize)
+                .ToListAsync(cancellationToken);
+        }
+
         public Entity Update(Entity entity)
         {
             object entityAux = (object)entity;
@@ -51,6 +60,11 @@ namespace Stage.Application.Repositories
 
             _context.Set<Entity>().Update(entity);
             return entity;
+        }
+
+        public async Task<bool> Commit()
+        {
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }

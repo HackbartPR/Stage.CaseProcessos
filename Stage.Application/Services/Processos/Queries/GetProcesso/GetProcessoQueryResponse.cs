@@ -2,12 +2,12 @@
 
 namespace Stage.Application.Services.Processos.Queries.GetProcesso
 {
-    public class GetProcessoQueryResponse
+    public class GetProcessoQueryResponse : ProcessoDto
     {
         public GetProcessoQueryResponse()
         {
             Areas = new HashSet<AreaDto>();
-            SubProcessos = new HashSet<ProcessoDto>();
+            SubProcessos = new HashSet<GetProcessoQueryResponse>();
             Ferramentas = new HashSet<FerramentaDto>();
         }
 
@@ -15,8 +15,8 @@ namespace Stage.Application.Services.Processos.Queries.GetProcesso
 
         public ProcessoDto? ParentProcess { get; set; } = null!;
 
-        public ICollection<ProcessoDto> SubProcessos { get; set; } = new HashSet<ProcessoDto>();
+        public ICollection<GetProcessoQueryResponse> SubProcessos { get; set; }
 
-        public ICollection<FerramentaDto> Ferramentas { get; set; } = new HashSet<FerramentaDto>();
+        public ICollection<FerramentaDto> Ferramentas { get; set; }
     }
 }

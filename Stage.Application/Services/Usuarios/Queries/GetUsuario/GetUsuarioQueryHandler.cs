@@ -40,58 +40,22 @@ namespace Stage.Application.Services.Usuarios.Queries.GetUsuario
 
         public IQueryable<Usuario> QueryUsuario(GetUsuarioQuery request)
         {
-            if (request.Id != null && request.Id != 0)
-                return GetById(request);
+            if (request.Id != null && request.Id > 0)
+                return _unitOfWork.UsuarioRepository.GetById((int) request.Id);
 
             if (!request.Name.IsNullOrEmpty())
-                return GetByName(request);
+                return _unitOfWork.UsuarioRepository.GetByName(request.Name!);
 
-            if (request.IdsAreas.Any(id => id != 0))
-                return GetByAreas(request);
+            if (!request.IdsAreas.Any(id => id <= 0))
+                return _unitOfWork.UsuarioRepository.GetByAreas(request.IdsAreas);
 
-            return GetAll();
+            return _unitOfWork.UsuarioRepository.GetAll();
         }
 
-        public IQueryable<Usuario> GetById(GetUsuarioQuery request)
-        {
-            return _unitOfWork.UsuarioRepository
-                    .GetEntity()
-                    .Include(u => u.Areas.Where(a => a.Active))
-                    .Where(u => u.Active && u.Id == request.Id);
-        }
-
-        public IQueryable<Usuario> GetByAreas(GetUsuarioQuery request)
-        {
-            return _unitOfWork.UsuarioRepository
-                .GetEntity()
-                .Include(u => u.Areas.Where(a => a.Active))
-                .Where(u => u.Active && request.IdsAreas.Contains(u.Id));
-        }
-
-        public IQueryable<Usuario> GetByName(GetUsuarioQuery request)
-        {
-            return _unitOfWork.UsuarioRepository
-                .GetEntity()
-                .Include(u => u.Areas.Where(a => a.Active))
-                .Where(u => u.Active && u.Name.Contains(request.Name!));
-        }
-
-        public IQueryable<Usuario> GetAll()
-        {
-            return _unitOfWork.UsuarioRepository
-                .GetEntity()
-                .Include(u => u.Areas.Where(a => a.Active))
-                .Where(u => u.Active);
-        }
-
-        public static async Task<ICollection<Usuario>> ToListAsync(IQueryable<Usuario> query, GetUsuarioQuery request, CancellationToken cancellationToken)
+        public async Task<ICollection<Usuario>> ToListAsync(IQueryable<Usuario> query, GetUsuarioQuery request, CancellationToken cancellationToken)
         {
             request.ValidatePageRequest();
-
-            return await query
-                .Skip((request.Page - 1) * request.PageSize)
-                .Take(request.PageSize)
-                .ToListAsync(cancellationToken);
+            return await _unitOfWork.UsuarioRepository.ToPagedListAsync(query, request, cancellationToken);
         }
 
         public static ICollection<GetUsuarioQueryResponse> CreateResponse(ICollection<Usuario> usuarios)

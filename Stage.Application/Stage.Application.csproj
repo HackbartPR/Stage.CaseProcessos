@@ -15,7 +15,6 @@
     <Folder Include="Services\Areas\Commands\" />
     <Folder Include="Services\Ferramentas\Command\" />
     <Folder Include="Services\Processos\Command\" />
-    <Folder Include="Services\Usuarios\Commands\" />
   </ItemGroup>
 
   <ItemGroup>

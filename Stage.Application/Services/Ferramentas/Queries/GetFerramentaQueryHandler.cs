@@ -40,58 +40,22 @@ namespace Stage.Application.Services.Ferramentas.Queries
 
         public IQueryable<Ferramenta> QueryFerramenta(GetFerramentaQuery request)
         {
-            if (request.Id != null && request.Id != 0)
-                return GetById(request);
+            if (request.Id != null && request.Id > 0)
+                return _unitOfWork.FerramentaRepository.GetById((int) request.Id);
 
             if (!request.Name.IsNullOrEmpty())
-                return GetByName(request);
+                return _unitOfWork.FerramentaRepository.GetByName(request.Name!);
 
-            if (request.IdsProcessos.Any(id => id != 0))
-                return GetByProcessos(request);
+            if (!request.IdsProcessos.Any(id => id <= 0))
+                return _unitOfWork.FerramentaRepository.GetByProcessos(request.IdsProcessos);
 
-            return GetAll();
+            return _unitOfWork.FerramentaRepository.GetAll();
         }
 
-        public IQueryable<Ferramenta> GetById(GetFerramentaQuery request)
-        {
-            return _unitOfWork.FerramentaRepository
-                    .GetEntity()
-                    .Include(a => a.Processos.Where(p => p.Active))
-                    .Where(a => a.Active && a.Id == request.Id);
-        }
-
-        public IQueryable<Ferramenta> GetByName(GetFerramentaQuery request)
-        {
-            return _unitOfWork.FerramentaRepository
-                .GetEntity()
-                .Include(a => a.Processos.Where(p => p.Active))
-                .Where(u => u.Active && u.Name.Contains(request.Name!));
-        }
-
-        public IQueryable<Ferramenta> GetByProcessos(GetFerramentaQuery request)
-        {
-            return _unitOfWork.FerramentaRepository
-                .GetEntity()
-                .Include(a => a.Processos.Where(p => p.Active))
-                .Where(a => a.Active && request.IdsProcessos.Contains(a.Id));
-        }
-
-        public IQueryable<Ferramenta> GetAll()
-        {
-            return _unitOfWork.FerramentaRepository
-                .GetEntity()
-                .Include(a => a.Processos.Where(p => p.Active))
-                .Where(a => a.Active);
-        }
-
-        public static async Task<ICollection<Ferramenta>> ToListAsync(IQueryable<Ferramenta> query, GetFerramentaQuery request, CancellationToken cancellationToken)
+        public async Task<ICollection<Ferramenta>> ToListAsync(IQueryable<Ferramenta> query, GetFerramentaQuery request, CancellationToken cancellationToken)
         {
             request.ValidatePageRequest();
-
-            return await query
-                .Skip((request.Page - 1) * request.PageSize)
-                .Take(request.PageSize)
-                .ToListAsync(cancellationToken);
+            return await _unitOfWork.FerramentaRepository.ToPagedListAsync(query, request, cancellationToken);
         }
 
         public static ICollection<GetFerramentaQueryResponse> CreateResponse(ICollection<Ferramenta> usuarios)

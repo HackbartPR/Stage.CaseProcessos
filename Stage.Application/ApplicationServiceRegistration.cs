@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using FluentValidation.AspNetCore;
+using FluentValidation;
+using Microsoft.Extensions.DependencyInjection;
 using Stage.Application.Notifications;
 using Stage.Application.Startup.Seeders;
 using Stage.Application.UnitsOfWork;
@@ -14,11 +16,19 @@ namespace Stage.Application
         {
             //Classes
             services.AddTransient<IUnitOfWork, SqlUnitOfWork>();
+
             services.AddScoped<INotificationContext, NotificationContext>();
 
             //Services
             services.AddHostedService<InitialDataSeed>();
+
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+
+            services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+            services.AddFluentValidationAutoValidation((fv) =>
+            {
+                fv.DisableDataAnnotationsValidation = true;
+            }).AddValidatorsFromAssemblyContaining<Assembly>(lifetime: ServiceLifetime.Transient);
 
             return services;
         }
