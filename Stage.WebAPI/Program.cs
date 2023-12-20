@@ -1,3 +1,4 @@
+using Microsoft.Extensions.DependencyInjection;
 using Stage.Application;
 using Stage.Domain.Config;
 using Stage.Infrastructure;

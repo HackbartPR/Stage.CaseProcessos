@@ -11,7 +11,7 @@ namespace Stage.Domain.Entities
 
         public int? IdParentProccess { get; set; }
 
-        public virtual Processo ParentProcess { get; set; } = null!;
+        public virtual Processo? ParentProcess { get; set; }
 
         public virtual ICollection<Processo> SubProcessos { get; set; } = new HashSet<Processo>();
 

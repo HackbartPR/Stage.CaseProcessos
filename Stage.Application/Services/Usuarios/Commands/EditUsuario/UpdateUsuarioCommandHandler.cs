@@ -40,7 +40,7 @@ namespace Stage.Application.Services.Usuarios.Commands.EditUsuario
             _usuario = await _unitOfWork.UsuarioRepository.GetById(request.Id).FirstOrDefaultAsync(cancellationToken);
             if (_usuario == null)
             {
-                _notification.AddNotification(ErrorsKeys.UsuarioNotFound, ErrorsMessages.UsuarioNotFound);
+                _notification.AddNotification(ErrorsKeys.EntityNotFound, ErrorsMessages.UsuarioNotFound);
                 throw new InvalidOperationException();
             }
             
@@ -48,7 +48,7 @@ namespace Stage.Application.Services.Usuarios.Commands.EditUsuario
             {
                 if (await _unitOfWork.AreaRepository.GetById(IdArea).FirstOrDefaultAsync(cancellationToken) == null)
                 {
-                    _notification.AddNotification(ErrorsKeys.AreaNotFound, ErrorsMessages.AreaNotFound);
+                    _notification.AddNotification(ErrorsKeys.EntityNotFound, ErrorsMessages.AreaNotFound);
                     throw new InvalidOperationException();
                 }
             }

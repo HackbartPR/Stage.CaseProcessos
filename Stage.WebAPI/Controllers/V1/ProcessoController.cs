@@ -1,8 +1,7 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Stage.Application.Extensions;
-using Stage.Application.Services.Ferramentas.Queries;
+using Stage.Application.Services.Processos.Command.AddProcesso;
 using Stage.Application.Services.Processos.Queries.GetProcesso;
 using Stage.Domain.Config;
 using Stage.Domain.Notifications;
@@ -29,6 +28,20 @@ namespace Stage.WebAPI.Controllers.V1
             {
                 var result = await _mediator.Send(request);
                 return MontarResponse<PagedBaseResponse<ICollection<GetProcessoQueryResponse>>>.OkPaged(result);
+            }
+            catch (Exception ex)
+            {
+                return MontarResponse<Exception>.Failure(ex.Message, _notificationContext);
+            }
+        }
+
+        [HttpPost("AddProcessos")]
+        public async Task<IActionResult> AddProcessos([FromBody] AddProcessoCommand request)
+        {
+            try
+            {
+                var result = await _mediator.Send(request);
+                return MontarResponse<BaseResponse<AddProcessoCommandResponse>>.Ok(result, _notificationContext);
             }
             catch (Exception ex)
             {

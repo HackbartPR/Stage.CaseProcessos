@@ -1,4 +1,6 @@
-﻿namespace Stage.Domain.DTOs
+﻿using Stage.Domain.Entities;
+
+namespace Stage.Domain.DTOs
 {
     public class ProcessoDto
     {

@@ -36,7 +36,7 @@ namespace Stage.Application.Services.Usuarios.Commands.AddUsuario
             foreach (int IdArea in request.IdsAreas)
             {
                 if ( await _unitOfWork.AreaRepository.GetById(IdArea).FirstOrDefaultAsync(cancellationToken: cancellationToken) == null){
-                    _notification.AddNotification(ErrorsKeys.AreaNotFound, ErrorsMessages.AreaNotFound);
+                    _notification.AddNotification(ErrorsKeys.EntityNotFound, ErrorsMessages.AreaNotFound);
                     throw new InvalidOperationException();
                 }
             }
@@ -65,7 +65,7 @@ namespace Stage.Application.Services.Usuarios.Commands.AddUsuario
             if (await _unitOfWork.AreaRepository.Commit())
                 return usuario;
 
-            _notification.AddNotification(ErrorsKeys.AreaNotSaved, ErrorsMessages.AreaNotSaved);
+            _notification.AddNotification(ErrorsKeys.EntityNotSaved, ErrorsMessages.AreaNotSaved);
             throw new InvalidOperationException("Entity had a problem to save!");
         }
 
